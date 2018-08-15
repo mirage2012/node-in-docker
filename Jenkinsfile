@@ -4,7 +4,7 @@
   git 'https://github.com/mirage2012/node-in-docker.git'
     
   stage('Build image') {
-  app = docker.build("[aramel-graph-209306]/[nodeapp]")
+  app = docker.build("[caramel-graph-209306]/[nodeapp]")
 }
  stage('Push image') {
   docker.withRegistry('https://us.gcr.io', 'gcr:[GCR]') {
