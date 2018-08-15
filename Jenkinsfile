@@ -4,6 +4,10 @@ node {
  
   stage 'Docker build'
   docker.build('demo')
+  stage 'Docker push'
+  docker.withRegistry('https://us.gcr.io') {
+    docker.image('demo').push('latest')
+  }
  
   
 }
