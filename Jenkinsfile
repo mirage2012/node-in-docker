@@ -15,7 +15,7 @@ node {
     input "Deploy to K8sS"
 }
   stage('Deploy to K8s') {
-   sh 'kubectl set image deployment/nodeapp nodeapp=us.gcr.io/caramel-graph-209306/nodeapp'
+   sh 'kubectl set image deployment/nodeapp nodeapp=us.gcr.io/caramel-graph-209306/nodeapp':latest
   }
 }
   }
